@@ -7,5 +7,6 @@ Usando un computer con Windows:
 - Estrai il file premendo tasto destro "estrai tutto..." file ( L'installazione del file zip e l'estrazione potrebbero richiedere qualche minuto )
 - Qui trovi un file "launcher" eseguilo con doppio click anche se dice che l'autore non è verificato
 - Si apriranno due terminale (finestre nere) una è l'app principale e una è il server e una terza finestra che è l'app
+- Consiglio di accedere con l'account username: Fede, password: Capolavoro10 per avere un account gia configurato
 # Importante
 Quando si finisce e si vuole chiudere l'app è molto importante chiudere tutte le tre finestre aperte
