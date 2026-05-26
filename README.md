@@ -2,6 +2,7 @@
 Qui sopra ci sono tutti i file caricati per la visualizzazione del codice online alcune parti sono state ignorate per la pesantezza del progetto
 
 # Come uso l'App ?
+Usando un computer con Windows:
 - Scarica questo file .zip premendo col mouse: [**NexBank.zip**](https://github.com/fedemarti090-coder/Unica-capolavoro-NexBank/releases/download/v1.0.0/NexBank.zip)
 - Estrai il file premendo tasto destro estrai file
 - Qui trovi un file "launcher" eseguilo con doppio click anche se dice che l'autore non è verificato
