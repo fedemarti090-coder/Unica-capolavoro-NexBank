@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=400, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>NexBank / Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../_animation.css">
+</head>
+
+<body>
+  <div id="message-store"
+    style="position: fixed; width: 100%; height: 100vh; top: 0; left: 0; z-index: 9999; pointer-events: none;"></div>
+  <div class="cards-background" id="cards-bg"></div>
+  <div class="login-wrapper">
+
+    <div class="login-box">
+
+      <h1 id="testoM">Login</h1>
+
+      <div class="detail-row">
+        <label style="user-select: none;">Username</label>
+        <div class="input-wrapper">
+          <input type="text" id="username">
+          <span class="suffix hidden" onclick="swith_gender();" id="gender">M</span>
+        </div>
+      </div>
+
+      <div class="detail-row" id="password-id">
+
+      </div>
+
+      <div class="remember-row" id="remember-row">
+        <input type="checkbox" id="remember">
+        <label for="remember" >Registrati come nuovo utente</label>
+
+      </div>
+
+      <div class="button-run">
+        <button onclick="login()" id="start-button">Accedi</button>
+      </div>
+
+
+    </div>
+
+  </div>
+  <script src="../_advice.js"></script>
+  <script src="visual.js"></script>
+  <script src="login-register.js"></script>
+</body>
+
+</html>

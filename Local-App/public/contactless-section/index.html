@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Contactless</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top-section" id="particle-container">
+        <button class="back-button" id="back-btn" aria-label="Torna indietro" onclick="window.electronAPI.carica_html(global_var.lastAccess)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </button>
+        <div class="nfc-area" id="pay-button">
+            <div class="ripple ripple-1"></div>
+            <div class="ripple ripple-2"></div>
+            <div class="ripple ripple-3"></div>
+
+            <svg class="nfc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="display:none"></svg>
+                <img class="nfc-icon" src="../../img/nfc-placeholder.png" alt="NFC Icon"  />
+        </div>
+
+        <p class="instruction-text" id="status-text">Avvicina qui per pagare</p>
+    </div>
+
+    <div class="bottom-section">
+        <div class="payment-card">
+            <div class="merchant-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </div>
+            <p class="merchant-name" id="merchant-name">Paga a Mercato locale</p>
+            <h1 id="ammount" class="amount">17,25 €</h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

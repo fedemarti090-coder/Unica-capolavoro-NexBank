@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  overflow: hidden;
+  color: #fff;
+    opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.wallet-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 24px 18px 18px 18px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.1));
+
+  z-index: 50;
+}
+
+.wallet-header .icon-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.wallet-scroll-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  scrollbar-width: none;
+  
+  /* aggiungi un overlay con gradiente scuro verso l’alto */
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0) 110px);
+}
+.wallet-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.wallet-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.card-details {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+
+.balance-box {
+  text-align: center;
+}
+
+.balance-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.balance-amount {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.payment-date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.payment-amount {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.positive {
+  color: #00C46A;
+}
+
+.negative {
+  color: #f44336;
+}
+
+
+
+.scrollbar-track {
+  position: fixed;
+  right: 6px;
+  top: 100px;
+  bottom: 20px;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.scrollbar-thumb {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  height: 50px;
+}
+
+
+
+.balance-box {
+  text-align: center;
+  transition:
+    all 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 0.3s ease;
+}
+
+
+
+.balance-box.compact {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 350px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 10;
+}
+
+
+
+.balance-box.compact .balance-label {
+  font-size: 0.7rem;
+  margin-bottom: 2px;
+}
+
+.balance-box.compact .balance-amount {
+  font-size: 1.2rem;
+}
+
+.balance-box.compact .balance-label {
+  opacity: 0.7;
+}
+
+.balance-box.compact {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.payment-row {
+  display: flex;
+  justify-content: flex-start;
+  /* allinea a sinistra */
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 10px;
+}
+
+.payment-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  flex-grow: 1;
+  /* occupa lo spazio centrale */
+}
+
+.payment-amount {
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: right;
+}

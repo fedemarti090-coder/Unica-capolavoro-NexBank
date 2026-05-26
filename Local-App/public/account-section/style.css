@@ -1,0 +1,376 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wallet-header {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 18px 0px 18px;
+  font-size: 2.2rem;
+  font-weight: 700;
+
+}
+
+.wallet-header .actions button,
+.wallet-header .icon-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.wallet-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.card-details {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.detail-row label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  user-select: none;
+  margin: 0;
+}
+
+.detail-row input {
+  background: rgba(255, 255, 255, 0.08);
+  /* Fondamentale: usa transparent invece di none */
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  /* Rimuove il bordo bianco/blu del browser al focus */
+  width: 100%;
+  box-sizing: border-box;
+  /* Evita che l'input si allarghi quando appare il bordo */
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.detail-row input:focus {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.button-run {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logout {
+  color: #e74c3c;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.logout:hover {
+  color: #c0392b;
+}
+
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px !important;
+}
+
+
+.edit-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.edit-icon:hover {
+  opacity: 0.7;
+}
+
+.edit-icon svg {
+  display: block;
+}
+
+.confirm-btn {
+  width: 100%;
+  background: #3498db;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.confirm-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.confirm-btn:active {
+  transform: translateY(1px);
+  filter: brightness(0.9);
+}
+
+
+.detail-row input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+}
+
+.pay-button.green {
+  display: flex;
+  width: 90%;
+  height: 50px;
+  margin-top: 25px;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  transition: all 0.2s ease;
+  box-shadow: none;
+  user-select: none;
+}
+
+.pay-button.green:active {
+  transform: scale(0.97);
+  filter: brightness(0.9);
+}
+
+/* Container della forza password */
+.strength-container {
+  margin-top: 10px;
+  padding: 10px 4px;
+}
+
+.strength-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Colori stati */
+.status-weak {
+  color: #ff4b4b;
+}
+
+.status-medium {
+  color: #ffa500;
+}
+
+.status-strong {
+  color: #22c55e;
+}
+
+/* Le tre barrette */
+.strength-bars {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.bar {
+  height: 4px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* Classi di stato per le barre */
+.bar.active-red {
+  background: #ff4b4b;
+}
+
+.bar.active-orange {
+  background: #ffa500;
+}
+
+.bar.active-green {
+  background: #22c55e;
+}
+
+/* Lista requisiti */
+.requirements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.req-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.5;
+  /* Spento di default */
+  transition: opacity 0.3s ease;
+}
+
+.req-item.valid {
+  opacity: 1;
+}
+
+.req-icon {
+  font-size: 0.8rem;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.req-item label {
+  font-size: 0.8rem;
+  color: #fff !important;
+  margin: 0;
+}
+
+/* Stile icone valid/invalid */
+.req-item:not(.valid) .req-icon {
+  color: #ff4b4b;
+}
+
+.req-item.valid .req-icon {
+  color: #22c55e;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+/* Container per l'input con icona */
+.input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  padding-right: 40px !important;
+  /* Spazio per non scrivere sopra l'icona */
+  width: 100%;
+}
+
+/* Stile dell'icona del fulmine */
+.generate-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generate-icon:hover {
+  color: #22c55e;
+  /* Diventa verde NexBank al passaggio */
+  transform: scale(1.1);
+}
+
+.generate-icon:active {
+  transform: scale(0.9);
+}
+
+.otp-error {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+.final-el {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    user-select: none;
+    margin: 15px auto;
+    display: block; 
+    width: fit-content;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}

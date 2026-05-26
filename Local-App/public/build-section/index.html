@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=400, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>NexBank / Genera Carta</title>
+  <link rel="stylesheet" href="../_animation.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../home-section/style.css">
+  <link rel="stylesheet" href="card3d/card3d.css">
+</head>
+
+<body>
+  <div id="message-store"
+    style="position: fixed; width: 100%; height: 100vh; top: 0; left: 0; z-index: 9999; pointer-events: none;"></div>
+  <div class="wallet-header animation-box">
+    <span>Genera Carta</span>
+    <div class="actions">
+      <button class="icon-btn" title="Profilo" onclick="window.electronAPI.carica_html('home')">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="2" stroke-linecap="round" />
+          <line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="wallet-content animation-box">
+    <div id="main-corp-home">
+      <div class="card-container" id="card-container" style="padding-bottom: 25px;">
+        <div class="card" id="card">
+          <canvas id="cardCanvas" width="350" height="220"></canvas>
+        </div>
+      </div>
+
+      <div class="card-details">
+        <div class="detail-row number-row">
+          <div class="number-input-wrapper">
+            <label>Numero carta</label>
+            <input type="text" id="numero_carta" readonly>
+          </div>
+          <button class="copy-btn" id="copy-btn" onclick="handleCreaCarta(); card_builded = true;">Crea</button>
+        </div>
+
+        <div class="detail-row half">
+          <div>
+            <label>Scadenza</label>
+            <input type="text" id="scadenza_carta" readonly>
+          </div>
+          <div>
+            <label>Restrizioni</label>
+            <input type="text" id="restrizioni" readonly value="000" style="color: #D1D5DB;">
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <label>Intestatario</label>
+          <input type="text" id="intestatario" maxlength="19">
+        </div>
+        <div class="detail-row">
+          <label id="saldo-text">Saldo ( euro )</label>
+          <div class="input-wrapper">
+            <input type="text" id="ammonto">
+            <span class="euro-icon" onclick="switch_valute()" id="euro-icon">€</span>
+          </div>
+        </div>
+
+        <div class="button-run">
+          <button id="genera-cvv-btn" onclick="generate_card()">Genera carta</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../_advice.js"></script>
+  <script src="script.js"></script>
+  <script src="card3d/card3d.js"></script>
+</body>
+
+</html>
