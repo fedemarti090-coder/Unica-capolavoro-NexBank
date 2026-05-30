@@ -6,7 +6,7 @@ Usando un computer con Windows:
 - Scarica questo file .zip premendo col mouse: [**NexBank.zip**](https://github.com/fedemarti090-coder/Unica-capolavoro-NexBank/releases/download/v1.0.0/NexBank.zip)
 - Estrai il file premendo tasto destro "estrai tutto..." file ( L'installazione del file zip e l'estrazione potrebbero richiedere qualche minuto )
 - Qui trovi un file "avvia" eseguilo con doppio click anche se dice che l'autore non è verificato
-- Si apriranno due terminale (finestre nere) una è l'app principale e una è il server e una terza finestra che è l'app
+- Si apriranno tre finestre: due terminali (finestre nere) una che serve per l'app principale e l'altra per il server, e una terza finestra che è l'app in se
 - Consiglio di accedere con l'account username: Fede, password: Capolavoro10 per avere un account gia configurato
 # Importante
 Quando si finisce e si vuole chiudere l'app è molto importante chiudere tutte le tre finestre aperte
