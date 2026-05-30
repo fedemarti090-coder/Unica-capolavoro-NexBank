@@ -5,7 +5,7 @@ Qui sopra ci sono tutti i file caricati per la visualizzazione del codice online
 Usando un computer con Windows:
 - Scarica questo file .zip premendo col mouse: [**NexBank.zip**](https://github.com/fedemarti090-coder/Unica-capolavoro-NexBank/releases/download/v1.0.0/NexBank.zip)
 - Estrai il file premendo tasto destro "estrai tutto..." file ( L'installazione del file zip e l'estrazione potrebbero richiedere qualche minuto )
-- Qui trovi un file "launcher" eseguilo con doppio click anche se dice che l'autore non è verificato
+- Qui trovi un file "avvia" eseguilo con doppio click anche se dice che l'autore non è verificato
 - Si apriranno due terminale (finestre nere) una è l'app principale e una è il server e una terza finestra che è l'app
 - Consiglio di accedere con l'account username: Fede, password: Capolavoro10 per avere un account gia configurato
 # Importante
